@@ -2,7 +2,7 @@ version: "3"
 
 services:
   traefik:
-    image: "traefik"
+    image: "traefik:v2.5"
     container_name: "traefik-ssl"
     restart: unless-stopped
     env_file: ".env"
