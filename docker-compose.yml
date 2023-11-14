@@ -9,7 +9,7 @@ services:
     command:
       # Enable the Trafik dashboard
       - --api.dashboard=true
-      -
+
       # Allow dashboard to use insecure connection
       - --api.insecure=true
 
