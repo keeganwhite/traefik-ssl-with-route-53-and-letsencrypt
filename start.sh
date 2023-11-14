@@ -7,4 +7,4 @@ echo "TRAEFIK_BRIDGE=$TRAEFIK_BRIDGE" > .env
 echo "DOMAIN=$DOMAIN" >> .env
 
 docker compose config
-docker compose config up
+docker compose up
