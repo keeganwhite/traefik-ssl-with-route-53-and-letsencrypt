@@ -1,5 +1,5 @@
 # Automated SSL Generation for Traefik
-Set up Traefik with SSL using Let's Encrypt and a Route 53 domain on an AWS EC2 Instance. Traefik will act as a reverse proxy and auto-renew your certificates!
+Set up Traefik with SSL using Let's Encrypt and a Route 53 domain on an AWS EC2 Instance. Traefik will act as a reverse proxy and auto-renew your certificates! This means you can host services on this domain using Docker. Just remember to add DNS entries in your Route53 entries to point to the IP address of your EC2 instance.
 
 ## Prerequisites
 - Install docker and docker compose
