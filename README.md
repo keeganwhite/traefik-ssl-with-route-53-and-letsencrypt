@@ -1,5 +1,5 @@
 # Automated SSL Generation for Traefik
-Set up Traefik with SSL using Let's Encrypt and a Route 53 domain on an AWS EC2 Instance.
+Set up Traefik with SSL using Let's Encrypt and a Route 53 domain on an AWS EC2 Instance. Traefik will act as a reverse proxy and auto-renew your certificates!
 
 ## Prerequisites
 - Install docker and docker compose
@@ -10,16 +10,9 @@ If you have set up the EC2 instance with the correct roles and policies you can 
 ```
 docker compose up -d
 ```
-## Getting Key and Zone
+## Allowing Traefik Access to Route53
 
-### Hosted Zone
-On your AWS Console navigate to Route 53, select your hosted zone and get the hosted zone ID that will appear when you 
-select the zone like so:
-
-![hosted-zone](images/hosted-zone-id.png)
-
-### Key
-General process to create a key, although you should take as many security precautions as possible and do your own 
+General process to create allow Traefik to manage your domain, although you should take as many security precautions as possible and do your own 
 research on the implication of these roles...
 #### Create an IAM Policy
 - Go to the IAM console in AWS. 
