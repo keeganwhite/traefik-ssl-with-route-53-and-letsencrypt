@@ -17,8 +17,8 @@ research on the implication of these roles...
 #### Create an IAM Policy
 - Go to the IAM console in AWS. 
 - Create a new policy. 
-- Grant permissions that allow changes to Route53. A typical policy might include actions like route53:ListHostedZones
-  `route53:GetChange`, `route53:ChangeResourceRecordSets`, `route53:ListHostedZonesByName` and `route53:ListHostedZones`. Restrict the resource to the 
+- Grant permissions that allow changes to Route53. A typical policy might include actions like
+  `route53:GetChange`, `route53:ChangeResourceRecordSets`, `route53:ListResourceRecordSets`, `route53:ListHostedZonesByName` and `route53:ListHostedZones`. Restrict the resource to the 
 specific hosted zone ID that Traefik will be working with.
 #### Create an IAM Role
 - In IAM console, create a new role.
