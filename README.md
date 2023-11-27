@@ -4,6 +4,9 @@ Set up Traefik with SSL using Let's Encrypt and a Route 53 domain on an AWS EC2 
 ## Prerequisites
 - Install docker and docker compose
 - Set up Roles and Policies (see below)
+- Change the default username and password protecting the Traefik Dashboard. It is set to `example` and `example`. To use
+a password in the docker compose you need to escape every `$` character with a `$` character. This is not true in environment variable files.
+Generate a password [here](https://www.web2generators.com/apache-tools/htpasswd-generator).
 
 ## Run the code
 If you have set up the EC2 instance with the correct roles and policies you can run the code as follows:

@@ -10,9 +10,6 @@ services:
       # Enable the Trafik dashboard
       - --api.dashboard=true
 
-      # Allow dashboard to use insecure connection
-      - --api.insecure=true
-
       # Tell Traefik to discover containers using the Docker API
       - --providers.docker=true
 
@@ -47,10 +44,12 @@ services:
 
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.traefik.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.${DOMAIN}`)"
       - "traefik.http.routers.traefik.service=api@internal"
       - "traefik.http.routers.traefik.entrypoints=websecure"
       - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.traefik.middlewares=myauth"
+      - "traefik.http.middlewares.myauth.basicauth.users=example:$$apr1$zho9gfbi$$LySlrOhKXAbv17bCUq3Vi/"
 
 networks:
   default:
