@@ -13,6 +13,8 @@ If you have set up the EC2 instance with the correct roles and policies you can 
 ```
 docker compose up -d
 ```
+
+This will take some time.
 ## Allowing Traefik Access to Route53
 
 General process to create allow Traefik to manage your domain, although you should take as many security precautions as possible and do your own 
