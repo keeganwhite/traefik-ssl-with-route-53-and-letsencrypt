@@ -7,11 +7,12 @@ Set up Traefik with SSL using Let's Encrypt and a Route 53 domain on an AWS EC2 
 - Change the default username and password protecting the Traefik Dashboard. It is set to `example` and `example`. To use
 a password in the docker compose you need to escape every `$` character with a `$` character. This is not true in environment variable files.
 Generate a password [here](https://www.web2generators.com/apache-tools/htpasswd-generator).
+- create a docker bridge to attach traefik to
 
 ## Run the code
 If you have set up the EC2 instance with the correct roles and policies you can run the code as follows:
 ```
-docker compose up -d
+./start.sh
 ```
 
 This will take some time.
